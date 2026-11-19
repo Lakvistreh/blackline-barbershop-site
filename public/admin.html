@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель власника — BLACKLINE</title><link rel="stylesheet" href="/styles.css"><script src="/admin.js" defer></script>
+</head>
+<body class="admin-body">
+  <header class="admin-header"><a class="brand" href="/"><span class="brand-mark">B</span><span>BLACKLINE<small>OWNER PANEL</small></span></a><a class="text-link" href="/">← НА САЙТ</a></header>
+  <main class="admin-main">
+    <section class="admin-login" id="loginPanel">
+      <p class="eyebrow">PRIVATE AREA</p><h1>ПАНЕЛЬ<br><em>ВЛАСНИКА.</em></h1>
+      <form id="loginForm" class="booking-form">
+        <label>ЛОГІН<input id="username" autocomplete="username" required></label>
+        <label>ПАРОЛЬ<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="button button-light submit-button">УВІЙТИ</button><p id="loginMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="dashboard-heading"><div><p class="eyebrow">BOOKINGS</p><h1>ЗАПИСИ <em>КЛІЄНТІВ.</em></h1></div><button id="logoutButton" class="button button-outline">ВИЙТИ</button></div>
+      <div class="dashboard-tools"><p id="bookingCount">Завантаження…</p><button id="refreshButton" class="button button-outline">ОНОВИТИ ↻</button></div>
+      <div class="table-wrap"><table><thead><tr><th>ДАТА / ЧАС</th><th>КЛІЄНТ</th><th>ПОСЛУГА</th><th>МАЙСТЕР</th><th>СТАТУС</th><th>ДІЯ</th></tr></thead><tbody id="bookingRows"><tr><td colspan="6">Завантаження…</td></tr></tbody></table></div>
+      <p class="form-note">Нові записи мають статус «Нова». Зв’яжіться з клієнтом телефоном, щоб підтвердити час.</p>
+      <p id="dashboardMessage" class="form-message" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BLACKLINE BARBERSHOP — чоловічі стрижки та оформлення бороди. Онлайн-запис.">
+  <title>BLACKLINE BARBERSHOP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#"><span class="brand-mark">B</span><span>BLACKLINE<small>BARBERSHOP</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">☰</button>
+  <nav id="mainNav">
+    <a href="#services">ПОСЛУГИ</a><a href="#about">ПРО НАС</a><a href="#gallery">ГАЛЕРЕЯ</a>
+    <a class="nav-cta" href="#booking">ЗАПИСАТИСЯ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">ТВОЯ СТРИЖКА. ТВОЇ ПРАВИЛА.</p>
+      <h1>СТИЛЬ<br><span>ПОЧИНАЄТЬСЯ</span><br>ТУТ.</h1>
+      <p class="hero-copy">Місце, де увага до деталей перетворюється на твій стиль. Професійні барбери та атмосфера, в яку хочеться повертатися.</p>
+      <div class="hero-actions"><a class="button button-light" href="#booking">ЗАПИСАТИСЯ <span>↗</span></a><a class="text-link" href="#services">НАШІ ПОСЛУГИ ↓</a></div>
+    </div>
+    <div class="hero-image" role="img" aria-label="Інтер’єр барбершопу"></div>
+    <div class="hero-index">01 <i></i> 03</div>
+  </section>
+
+  <section class="ticker"><span>PRECISION</span><b>✳</b><span>CRAFT</span><b>✳</b><span>YOUR STYLE</span><b>✳</b><span>BLACKLINE</span></section>
+
+  <section class="section" id="services">
+    <div class="section-heading"><div><p class="eyebrow">ЩО МИ РОБИМО</p><h2>ПОСЛУГИ <em>& ЦІНИ</em></h2></div><p>Жодних компромісів — тільки точність, майстерність і твій результат.</p></div>
+    <div class="service-grid" id="serviceList"><p class="muted">Завантажуємо послуги…</p></div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-image"></div>
+    <div class="about-copy"><p class="eyebrow">BLACKLINE PHILOSOPHY</p><h2>НЕ ПРОСТО<br>СТРИЖКА.<br><em>ТВОЯ ІСТОРІЯ.</em></h2>
+      <p>Ми віримо, що стиль — це увага до деталей. У BLACKLINE кожен візит — це час для себе, професійний підхід і результат, який відчувається.</p>
+      <a class="text-link" href="#booking">ЗНАЙТИ СВІЙ ЧАС ↗</a>
+    </div>
+  </section>
+
+  <section class="section gallery-section" id="gallery">
+    <div class="section-heading"><div><p class="eyebrow">OUR WORK</p><h2>АТМОСФЕРА <em>BLACKLINE</em></h2></div><p>Простір, майстерність і деталі.</p></div>
+    <div class="gallery"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85" alt="Робоче місце барбера"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85" alt="Барбер за роботою"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85" alt="Інструменти барбера"></div>
+  </section>
+
+  <section class="booking-section" id="booking">
+    <div class="booking-intro"><p class="eyebrow">BOOK YOUR VISIT</p><h2>ТВІЙ ЧАС<br><em>У BLACKLINE.</em></h2><p>Обери послугу, майстра та зручний час. Ми зв’яжемося з тобою для підтвердження запису.</p>
+      <div class="contact-lines"><p><span>ТЕЛЕФОН</span><a id="phoneLink" href="tel:+380XXXXXXXXX">+380 XX XXX XX XX</a></p><p><span>ГРАФІК</span>Щодня · 10:00–20:00</p></div>
+    </div>
+    <form class="booking-form" id="bookingForm">
+      <div class="form-title"><span>01 / ЗАПИС</span><span class="form-required">* ОБОВ’ЯЗКОВІ ПОЛЯ</span></div>
+      <label>ПОСЛУГА<select id="service" required><option value="">Завантаження…</option></select></label>
+      <label>МАЙСТЕР<select id="barber" required><option value="">Оберіть майстра</option></select></label>
+      <div class="form-row"><label>ДАТА<input id="date" type="date" required></label><label>ЧАС<select id="time" required><option value="">Спочатку оберіть дату</option></select></label></div>
+      <label>ВАШЕ ІМ’Я<input id="customerName" type="text" minlength="2" maxlength="60" placeholder="Як до вас звертатися?" required></label>
+      <label>НОМЕР ТЕЛЕФОНУ<input id="customerPhone" type="tel" maxlength="20" placeholder="+380..." required></label>
+      <button class="button button-light submit-button" type="submit">ПІДТВЕРДИТИ ЗАПИС <span>↗</span></button>
+      <p class="form-note">Надсилаючи форму, ви погоджуєтеся, що барбершоп використає ці дані для зв’язку щодо вашого запису.</p>
+      <p class="form-message" id="formMessage" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="footer"><a class="brand" href="#"><span class="brand-mark">B</span><span>BLACKLINE<small>BARBERSHOP</small></span></a><p id="footerAddress">Вкажіть адресу барбершопу</p><div><a id="instagramLink" href="https://instagram.com/your_account" target="_blank" rel="noopener">INSTAGRAM ↗</a><a href="/admin.html">ВХІД ВЛАСНИКА</a></div><small>© <span id="year"></span> BLACKLINE. Демонстраційний шаблон — замініть тестові дані перед публікацією.</small></footer>
+</body>
+</html>
